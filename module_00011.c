@@ -21,7 +21,6 @@ static const char *HASH_NAME      = "Joomla < 2.5.18";
 static const u64   KERN_TYPE      = 10;
 static const u32   OPTI_TYPE      = OPTI_TYPE_ZERO_BYTE
                                   | OPTI_TYPE_PRECOMPUTE_INIT
-                                  | OPTI_TYPE_MEET_IN_MIDDLE
                                   | OPTI_TYPE_EARLY_SKIP
                                   | OPTI_TYPE_NOT_ITERATED
                                   | OPTI_TYPE_APPENDED_SALT
@@ -57,7 +56,7 @@ int module_hash_decode (MAYBE_UNUSED const hashconfig_t *hashconfig, MAYBE_UNUSE
 
   token.token_cnt  = 2;
 
-  token.sep[0]     = hashconfig->separator;
+  token.sep[0]     
   token.len_min[0] = 32;
   token.len_max[0] = 32;
   token.attr[0]    = TOKEN_ATTR_VERIFY_LENGTH
